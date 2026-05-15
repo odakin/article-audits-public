@@ -1,0 +1,51 @@
+title: How dangerous is Anthropic's Mythos AI?
+author: Bruce Schneier
+publication: The Guardian
+url: https://www.theguardian.com/
+publication_date: 2026-05-08
+audit_date: 2026-05-15
+auditor: odakin
+verdict: mixed
+tags:
+- ai
+- security
+- anthropic
+- schneier
+- mythos
+- opinion
+- cybersecurity
+- tax-code
+- regulatory-hacking
+key_claims:
+- text: Anthropic Mythos の uniqueness を割引け、 GPT-5.5 / smaller model で同等
+  status: verified
+  notes: AISI 公式数値 (statistical tie) + AISLE 8/8 reproduction + Stenberg「marketing」
+    評価 の 3 独立 source で empirically 支持
+- text: Mozilla used Mythos to find 271 vulnerabilities in Firefox
+  status: partial
+  notes: 271 件は Mozilla 公式 attribute で事実、 ただし正式 CVE credited は 3 件のみ。 Schneier の word
+    choice「vulnerabilities」 は metric inflation
+- text: AI 脆弱性発見能力は本物、 攻撃側にとっても防御側にとっても重要
+  status: verified
+  notes: OpenBSD 27 年もの logic flaw、 FreeBSD NFS RCE、 curl 等、 複数の具体例で支持
+- text: 短期的にはより危険、 patch 不能 system も多い
+  status: verified
+  notes: curl 8.21.0 patch まで 1.5 ヶ月の具体例、 attacker / defender の非対称も古典的
+- text: endgame は AI-enhanced defender が AI-enhanced attacker に対して優位
+  status: disputed
+  notes: Schneier の wish thinking。 Stenberg「AI tool は novel category 不得手」 + AISLE
+    jagged frontier の安価 model fleet 戦略は attacker 側に有利な scaling property を含む
+- text: 投資銀行は既に密かに税法 AI hacking を進めている
+  status: partial
+  notes: JPMorganChase が Project Glasswing に正規参加判明、 「密かに」 rhetoric は事実を弱める方向に外れ。 Big4
+    の機械学習 tax planning は過去 5-10 年公開資料あり、 LLM 固有能力は public evidence 段階で未確認
+- text: Double Dutch Irish Sandwich は AI が見つけ得る複雑 loophole の例
+  status: outdated
+  notes: Ireland 2020 制度改正で phase-out 済、 grandfathering も 2020 終了。 過去事例としてはまだ機能
+- text: 規則系 (税法 / 環境 / 食品安全) への波及論
+  status: verified
+  notes: Schneier の 5 年越し thesis (= 2021 学術論文 + 2023 *A Hacker's Mind* + *Hacking
+    the Tax Code*)、 thesis 自体は robust
+- text: AI 革命 = 認知の体外 scale 化、 産業革命と同型
+  status: inconclusive
+  notes: analogy として有用、 評価対象でなく frame

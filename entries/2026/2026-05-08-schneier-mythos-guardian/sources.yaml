@@ -1,0 +1,181 @@
+# Sources for: Bruce Schneier "How dangerous is Anthropic's Mythos AI?" audit
+# All accessed 2026-05-15 unless otherwise noted
+
+- id: schneier-guardian-mythos
+  url: https://www.theguardian.com/  # 元 URL は paywall 化 / link rot 注意
+  accessed: 2026-05-15
+  type: opinion
+  authority: medium
+  supports_claims:
+    - "audit 対象の Schneier opinion piece 本体 (The Guardian, 2026-05-08)"
+
+- id: schneier-blog-mirror
+  url: https://www.schneier.com/essays/archives/2026/05/how-dangerous-is-anthropics-mythos-ai.html
+  accessed: 2026-05-15
+  type: opinion
+  authority: medium
+  supports_claims:
+    - "Schneier 自身の essay archive、 Guardian 記事の正本 mirror"
+
+- id: schneier-blog-mythos-glasswing
+  url: https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html
+  accessed: 2026-05-15
+  type: opinion
+  authority: medium
+  supports_claims:
+    - "Schneier 自身が事前ブログで「Anthropic Mythos = very much a PR play」 と評価"
+
+- id: schneier-coming-ai-hackers-2021
+  url: https://www.schneier.com/academic/archives/2021/04/the-coming-ai-hackers.html
+  accessed: 2026-05-15
+  type: academic_paper
+  authority: high
+  supports_claims:
+    - "Schneier の thesis 起源 (2021 Belfer Center 学術論文)、 5 年越し議論の origin"
+
+- id: schneier-hacking-tax-code-2023
+  url: https://www.schneier.com/blog/archives/2023/02/hacking-the-tax-code.html
+  accessed: 2026-05-15
+  type: opinion
+  authority: medium
+  supports_claims:
+    - "Schneier の税法 hacking 個別 essay (2023)、 §4 規則系波及論の前史"
+
+- id: anthropic-mythos-preview
+  url: https://red.anthropic.com/2026/mythos-preview/
+  accessed: 2026-05-15
+  type: press_release
+  authority: high
+  supports_claims:
+    - "Anthropic 公式 Mythos Preview 発表 (2026-04)、 model 実在の primary evidence"
+
+- id: anthropic-glasswing
+  url: https://www.anthropic.com/glasswing
+  accessed: 2026-05-15
+  type: press_release
+  authority: high
+  supports_claims:
+    - "Project Glasswing 公式説明、 参加企業 40+ 社、 $100M usage credits + $4M OSS 寄付"
+
+- id: aisi-mythos-eval
+  url: https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities
+  accessed: 2026-05-15
+  type: official_eval
+  authority: high
+  supports_claims:
+    - "UK AISI 公式 Mythos cyber capability 評価、 expert task 68.6% (±8.7%)"
+    - "Mythos が AISI corporate network attack simulation を初めて end-to-end 完遂"
+
+- id: aisi-gpt55-eval
+  url: https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities
+  accessed: 2026-05-15
+  type: official_eval
+  authority: high
+  supports_claims:
+    - "UK AISI 公式 GPT-5.5 cyber capability 評価、 expert task 71.4% (±8.0%)"
+    - "GPT-5.5 と Mythos は statistical tie、 Schneier §1 uniqueness 否定を支持"
+
+- id: aisle-jagged-frontier
+  url: https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier
+  accessed: 2026-05-15
+  type: primary_research
+  authority: high
+  supports_claims:
+    - "8/8 model が Mythos flagship FreeBSD exploit を検出 (含 GPT-OSS-20b、 3.6B active、 $0.11/M tokens)"
+    - "GPT-OSS-120b (5.1B active) が OpenBSD SACK chain を single call で recover"
+    - "Qwen3 32B は OpenBSD SACK で「robust」 と confidently 誤断言"
+    - "Jagged frontier 概念: AI cybersecurity capability は model size / generation / price で smoothly に scale しない"
+    - "strategic 含意: 安価 model fleet で broad coverage が optimal"
+
+- id: stenberg-curl-mythos
+  url: https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/
+  accessed: 2026-05-15
+  type: maintainer_blog
+  authority: high
+  supports_claims:
+    - "Stenberg curl 評価: 178K LOC scan、 5 件報告中 実 vulnerability 1 件 (signal/noise 1/5)"
+    - "1 件は severity-low CVE、 curl 8.21.0 (2026-06 末) で patch 予定"
+    - "既存 AI tool (AISLE / Zeropath / OpenAI Codex) で curl に 200-300 件 bugfix、 Mythos は fewer"
+    - "Stenberg 中心評価: 「the big hype around this model so far was primarily marketing」"
+    - "AI tool は確立済 error category は得意、 novel vulnerability type は不得手"
+    - "「Not using AI code analyzers ... leave opportunity to attackers」"
+    - "Mythos access の bureaucratic 遅延 (= curl 作者本人ですら数週間)"
+
+- id: mozilla-blog-zerodays
+  url: https://blog.mozilla.org/en/privacy-security/ai-security-zero-day-vulnerabilities/
+  accessed: 2026-05-15
+  type: primary_research
+  authority: high
+  supports_claims:
+    - "Mozilla 公式: Firefox 150 で Mythos attribute の 271 件、 Opus 4.6 比 12 倍"
+
+- id: mozilla-hacks-firefox
+  url: https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/
+  accessed: 2026-05-15
+  type: maintainer_blog
+  authority: high
+  supports_claims:
+    - "Firefox 150 の Mythos pipeline 詳細、 sec-high 180 / sec-moderate 80 / sec-low 11"
+
+- id: securityweek-271
+  url: https://www.securityweek.com/claude-mythos-finds-271-firefox-vulnerabilities/
+  accessed: 2026-05-15
+  type: news
+  authority: medium
+  supports_claims:
+    - "Firefox 150 で Claude credited の正式 CVE は 3 件のみ (CVE-2026-6746/6757/6758)"
+    - "271 = code defects 総数、 大半は 3 CVE bundle の variant として吸収"
+
+- id: venturebeat-mythos-openbsd
+  url: https://venturebeat.com/security/mythos-detection-ceiling-security-teams-new-playbook
+  accessed: 2026-05-15
+  type: news
+  authority: medium
+  supports_claims:
+    - "OpenBSD TCP SACK 27 年もの脆弱性の機構詳細"
+    - "campaign $20K / specific run < $50"
+    - "static analysis / fuzzers / auditors had all missed this logic flaw (= 結果論的 absence)"
+
+- id: rival-mythos-contamination
+  url: https://rival.security/posts/mythos-discovered-a-cve-already-in-its-training-data---and-thats-still-worrying
+  accessed: 2026-05-15
+  type: opinion
+  authority: medium
+  supports_claims:
+    - "Mythos の「発見」 が training data に既に含まれる public CVE の memorization である可能性"
+    - "17 年もの bug は public patch / advisory が long tail で training data に入る経路あり"
+
+- id: promarket-glasswing-antitrust
+  url: https://www.promarket.org/2026/04/22/the-antitrust-risks-of-anthropics-project-glasswing-and-the-ai-avengers/
+  accessed: 2026-05-15
+  type: opinion
+  authority: medium
+  supports_claims:
+    - "Project Glasswing は antitrust 法上 illegal cartel に該当する可能性"
+    - "40+ 企業 concerted action、 non-member 排除 = restraint of trade"
+    - "JPMorganChase が Glasswing 正規参加企業"
+
+- id: flyingpenguin-marketing-trick
+  url: https://www.flyingpenguin.com/freebsd-cve-2026-4747-log-suggests-mythos-is-a-marketing-trick/
+  accessed: 2026-05-15
+  type: opinion
+  authority: low
+  supports_claims:
+    - "FreeBSD CVE-2026-4747 の Anthropic announcement timing 不整合疑念"
+    - "「既知 bug を Mythos brand で再 packaging」 可能性の指摘"
+
+- id: gizmodo-daybreak
+  url: https://gizmodo.com/daybreak-openais-answer-to-anthropics-project-glasswing-has-arrived-2000757349
+  accessed: 2026-05-15
+  type: news
+  authority: medium
+  supports_claims:
+    - "OpenAI が 'Daybreak' で Glasswing 対抗 consortium を結成"
+
+- id: the-decoder-myth-crumbles
+  url: https://the-decoder.com/the-myth-of-claude-mythos-crumbles-as-small-open-models-hunt-the-same-cybersecurity-bugs-anthropic-showcased/
+  accessed: 2026-05-15
+  type: news
+  authority: medium
+  supports_claims:
+    - "AISLE study の reporting、 smaller open model で reproduction 成功"
