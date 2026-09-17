@@ -1,5 +1,10 @@
 # SESSION.md — article-audits-public
 
+## 2026-09-18 — root の入口 (AGENTS.md) 追加 + 「Claude が push しない」 規則の対象を絞った
+
+- Codex は `AGENTS.md` しか自動発見しないので、 規約どおり root に薄い入口を置いた (中身は `CLAUDE.md` / `SESSION.md` を読めと言うだけ、 契約 = claude-config `CONVENTIONS.md#agent-instruction-entrypoints`)。
+- `CLAUDE.md` の「commit は sync 後 … 私の手で push しない」 の**対象を sync が書く file (INDEX.md + entries/) に限定**した = 公開される中身を人が見るための規則で、 root の維持 file (規約・入口・ライセンス) は対象外。 `scripts/sync-public.py` は entries/ と INDEX.md しか書かず削除もしないので、 root の file は同期で消えない。
+
 ## 2026-05-15 第 1 セッション = mirror 初期化 + 第 1 entry 同期 + history wipe
 
 Source of truth `~/Claude/article-audits/` の初期化と同時に mirror を作成。 `scripts/sync-public.py` で第 1 entry (= Schneier Mythos Guardian audit) を同期。
